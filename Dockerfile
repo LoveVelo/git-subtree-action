@@ -10,4 +10,6 @@ RUN apk add \
 
 COPY entrypoint.sh /root/entrypoint.sh
 
+RUN git config --global --add safe.directory /github/workspace
+
 ENTRYPOINT ["/root/entrypoint.sh"]
