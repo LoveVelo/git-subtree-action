@@ -11,14 +11,6 @@ inputs:
     ## Use a repo/org secret for this value. ##
     description: "Deployment SSH key for pushing to child repo (checkout out deployment tokens for single repos or bot accounts for multi-repos/orgs.)"
     required: true
-  tag:
-    description: "Create (or mirror) a tag on the child subtree repository (branch or tag ref that triggered the workflow when true.)"
-    required: false
-    default: "false"
-  force:
-    description: "Force push to the child subtree repository (recommended for pure downstream mirrors.)"
-    required: false
-    default: "false"
   branch:
     description: "Branch of child subtree repository (default is branch or tag ref that triggered the workflow.)"
     required: false
