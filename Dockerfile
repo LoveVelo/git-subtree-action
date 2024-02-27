@@ -8,8 +8,8 @@ RUN apk add \
         openssh \
         git git-subtree git-lfs
 
-COPY entrypoint.sh /root/entrypoint.sh
+RUN git config --global --add safe.directory '*'
 
-RUN git config --global --add safe.directory /github/workspace
+COPY entrypoint.sh /root/entrypoint.sh
 
 ENTRYPOINT ["/root/entrypoint.sh"]
