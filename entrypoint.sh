@@ -19,5 +19,7 @@ if [ "$INPUT_BRANCH" == "" ]; then
 	fi
 fi
 
+git config --global --add safe.directory "*"
+
 # Push to the subtree directory
 git subtree push --prefix="${INPUT_PATH}" "git@github.com:${INPUT_REPO}.git" "$INPUT_BRANCH"
